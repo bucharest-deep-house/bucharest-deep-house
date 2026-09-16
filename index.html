@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bucharest Deep House — an unofficial festival concept page." />
+  <title>Bucharest Deep House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Italiana&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f4f0e7;
+      --lime: #d7ff3f;
+      --ink: #090b0b;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--cream);
+      background: var(--ink);
+      font-family: "Inter", sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(22px, 4vw, 58px);
+      background-image:
+        linear-gradient(180deg, rgba(5, 7, 7, .18) 0%, rgba(5, 7, 7, .05) 36%, rgba(5, 7, 7, .92) 100%),
+        url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=2200&q=90");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(215, 255, 63, .24), transparent 26%),
+        repeating-linear-gradient(90deg, transparent 0 12vw, rgba(255,255,255,.05) 12vw calc(12vw + 1px));
+      mix-blend-mode: screen;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .logo { line-height: 1.15; }
+    .edition { color: var(--lime); }
+
+    .content {
+      width: min(1180px, 100%);
+      margin: auto 0 0;
+      padding-top: 16vh;
+    }
+
+    .eyebrow {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      font-size: clamp(11px, 1.1vw, 14px);
+      letter-spacing: .2em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 55px;
+      height: 2px;
+      background: var(--lime);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 1050px;
+      font-family: "Italiana", serif;
+      font-size: clamp(67px, 12vw, 180px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .72;
+      text-transform: uppercase;
+      text-shadow: 0 4px 35px rgba(0,0,0,.35);
+    }
+
+    h1 span {
+      display: block;
+      margin-left: clamp(25px, 11vw, 175px);
+      color: var(--lime);
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: minmax(250px, .75fr) minmax(390px, 1.25fr);
+      gap: clamp(28px, 7vw, 100px);
+      align-items: end;
+      margin-top: clamp(38px, 8vh, 90px);
+    }
+
+    .details {
+      border-top: 1px solid rgba(255,255,255,.5);
+      padding-top: 18px;
+    }
+
+    .date {
+      margin: 0 0 7px;
+      font-size: clamp(22px, 3vw, 40px);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+    }
+
+    .place {
+      margin: 0;
+      opacity: .78;
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .lineup {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 28px;
+      border-left: 2px solid var(--lime);
+      padding-left: clamp(18px, 3vw, 38px);
+    }
+
+    .artist {
+      font-size: clamp(21px, 3vw, 45px);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    footer {
+      position: absolute;
+      right: 14px;
+      bottom: 9px;
+      font-size: 9px;
+      opacity: .45;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 700px) {
+      .hero { min-height: 100svh; }
+      header { align-items: flex-start; }
+      .edition { max-width: 145px; text-align: right; }
+      .content { padding-top: 12vh; }
+      h1 { line-height: .78; }
+      .bottom { grid-template-columns: 1fr; gap: 28px; }
+      .lineup { grid-template-columns: 1fr; gap: 5px; }
+      .artist { font-size: clamp(28px, 9vw, 42px); }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <header>
+      <div class="logo">Bucharest<br />Deep House</div>
+      <div class="edition">One night only · 2027</div>
+    </header>
+
+    <section class="content" aria-label="Festival details">
+      <div class="eyebrow">A night beneath the city lights</div>
+      <h1>Bucharest <span>Afterdark</span></h1>
+
+      <div class="bottom">
+        <div class="details">
+          <p class="date">28 August 2027</p>
+          <p class="place">Secret open-air location · Bucharest</p>
+        </div>
+
+        <div class="lineup" aria-label="Artist lineup">
+          <div class="artist">Solomun</div>
+          <div class="artist">Carl Cox</div>
+          <div class="artist">Peggy Gou</div>
+          <div class="artist">Black Coffee</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>Unofficial concept page · made for fun</footer>
+  </main>
+</body>
+</html>
 
