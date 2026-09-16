@@ -221,5 +221,16 @@
 
     <footer>Unofficial parody concept · Fictional event · Tickets are not valid for entry</footer>
   </main>
+  <script>
+  const ticketButton = document.querySelector(".ticket-button");
+
+  ticketButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    alert("😂 You just got pranked by your wife! Ahah!");
+
+    window.location.href = "tickets-radu.pdf";
+  });
+</script>
 </body>
 </html>
